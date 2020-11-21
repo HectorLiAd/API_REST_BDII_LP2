@@ -11,11 +11,12 @@ type getPersonByIDRequest struct {
 	PersonaID string
 }
 
-func makeGetPersonByIDEndPoint(s Service) endpoint.Endpoint {
+func makeGetPersonByIDEndPoint() endpoint.Endpoint {
 	getPersonByID := func(ctx context.Context, request interface{}) (interface{}, error) {
-		rep := request.(getPersonByIDRequest)
-		persona, err := s.GetPersonByID(&rep)
-		return persona, err
+		// rep := request.(getPersonByIDRequest)
+		//_, err := s.GetPersonByID(&rep)
+
+		return map[string]string{"mensaje": "cscscsc"}, nil
 	}
 	return getPersonByID
 }

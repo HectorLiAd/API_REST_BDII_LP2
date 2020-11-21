@@ -9,12 +9,12 @@ import (
 )
 
 /*MakeHTTPHandler nos permitira ejecutar metodos de persona*/
-func MakeHTTPHandler(s Service) http.Handler {
+func MakeHTTPHandler() http.Handler {
 	r := chi.NewRouter()
 
 	//Obtener personas por su identificador
 	getPersonByHandler := kithttp.NewServer(
-		makeGetPersonByIDEndPoint(s),
+		makeGetPersonByIDEndPoint(),
 		getPersonByIDRequestDecoder,
 		kithttp.EncodeJSONResponse,
 	)

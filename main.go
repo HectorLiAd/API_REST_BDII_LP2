@@ -16,13 +16,13 @@ func main() {
 	db := database.InitDB()
 	defer db.Close()
 
-	var personaRepository = persona.NewRepository(db)
-	var personaServicio = persona.NerService(personaRepository)
+	// var personaRepository = persona.NewRepository(db)
+	// var personaServicio = persona.NerService(personaRepository)
 
 	r := chi.NewRouter()
 	r.Use(handler.GetCors().Handler)
 
-	r.Mount("/persona", persona.MakeHTTPHandler(personaServicio))
+	r.Mount("/persona", persona.MakeHTTPHandler())
 
 	// dandole un puerto segun lo que requiera heroku
 	port := os.Getenv("PORT")
