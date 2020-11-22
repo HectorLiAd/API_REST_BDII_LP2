@@ -18,7 +18,7 @@ func MakeHTTPHandler() http.Handler {
 		getPersonByIDRequestDecoder,
 		kithttp.EncodeJSONResponse,
 	)
-	r.Method(http.MethodGet, "/{id}", getPersonByHandler)
+	r.Method(http.MethodGet, "/mensaje", getPersonByHandler)
 
 	return r
 }
