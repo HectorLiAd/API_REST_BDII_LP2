@@ -6,15 +6,16 @@ import (
 
 	// "github.com/API_REST_BDII_LP2/database"
 
-	"github.com/HectorLiAd/API_REST_BDII_LP2/database"
-	"github.com/HectorLiAd/API_REST_BDII_LP2/handler"
-	"github.com/HectorLiAd/API_REST_BDII_LP2/persona"
+	// "github.com/HectorLiAd/API_REST_BDII_LP2/handler"
+	// "github.com/HectorLiAd/API_REST_BDII_LP2/persona"
+	"github.com/API_REST_BDII_LP2/handler"
+	"github.com/API_REST_BDII_LP2/persona"
 	"github.com/go-chi/chi"
 )
 
 func main() {
-	db := database.InitDB()
-	defer db.Close()
+	// db := database.InitDB()
+	// defer db.Close()
 
 	// var personaRepository = persona.NewRepository(db)
 	// var personaServicio = persona.NerService(personaRepository)
